@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER GO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css">
+    <link rel="stylesheet" href="../main.css">
+    <!-- <link rel="stylesheet" href="../css/weather.css"> -->
+</head>
+<html lang="en">
+    <nav class="bg-pink-500 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- ロゴ -->
+          <a href="#" class="text-white font-semibold text-xl">TASK GO</a>
+          <!-- メニュー項目 -->
+          <ul class="flex space-x-4">
+            <li><a href="../index.html" class="text-white hover:text-gray-300">Home</a></li>
+            <li><a href="../pages/weather.html" class="text-white hover:text-gray-300">Weather</a></li>
+            <li><a href="#" class="text-white hover:text-gray-300">Services</a></li>
+            <li><a href="#" class="text-white hover:text-gray-300">Contact</a></li>
+          </ul>
+        </div>
+    </nav>
+    <body>
+        <section class="greeting">
+            <h2 class="title">
+                What's up, <input type="text" id="name" placeholder="Name here">
+            </h2>
+        </section>
+        <section class="create-todo">
+            <h3>Let's search</h3>
+            <form id="new-todo-form">
+                <h4>Type your city name</h4>
+                <input class="city-input" type="text" placeholder="E.g., New York, London, Tokyo" style="background-color:white;">
+                <div class="options">
+                    <button class="search-btn">Search</button>
+                    <button class="location-btn">Use Current Location</button>
+                </div>
+            </form>
+        </section>
+        <div class="container">
+            <div class="weather-input">
+                <!-- <button class="search-btn">Search</button> -->
+                <div class="separator"></div>
+                <!-- <button class="location-btn">Use Current Location</button> -->
+            </div>
+            <div class="weather-data">
+                <div class="current-weather">
+                <div class="details">
+                    <h2>_______ ( ______ )</h2>
+                    <h6>Temperature: __°C</h6>
+                    <h6>Wind: __ M/S</h6>
+                    <h6>Humidity: __%</h6>
+                </div>
+                </div>
+                <div class="days-forecast">
+                <h2>5-Day Forecast</h2>
+                <ul class="weather-cards">
+                    <li class="card">
+                    <h3>( ______ )</h3>
+                    <h6>Temp: __C</h6>
+                    <h6>Wind: __ M/S</h6>
+                    <h6>Humidity: __%</h6>
+                    </li>
+                    <li class="card">
+                    <h3>( ______ )</h3>
+                    <h6>Temp: __C</h6>
+                    <h6>Wind: __ M/S</h6>
+                    <h6>Humidity: __%</h6>
+                    </li>
+                    <li class="card">
+                    <h3>( ______ )</h3>
+                    <h6>Temp: __C</h6>
+                    <h6>Wind: __ M/S</h6>
+                    <h6>Humidity: __%</h6>
+                    </li>
+                    <li class="card">
+                    <h3>( ______ )</h3>
+                    <h6>Temp: __C</h6>
+                    <h6>Wind: __ M/S</h6>
+                    <h6>Humidity: __%</h6>
+                    </li>
+                    <li class="card">
+                    <h3>( ______ )</h3>
+                    <h6>Temp: __C</h6>
+                    <h6>Wind: __ M/S</h6>
+                    <h6>Humidity: __%</h6>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>  
+    </body>
+  <script src="../js/weather.js"></script>
+</html>

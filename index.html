@@ -7,9 +7,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <nav class="bg-pink-500 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- ロゴ -->
+          <a href="#" class="text-white font-semibold text-xl">TASK GO</a>
+          <!-- メニュー項目 -->
+          <ul class="flex space-x-4">
+            <li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
+            <li><a href="pages/weather.html" class="text-white hover:text-gray-300">Weather</a></li>
+            <li><a href="pages/weather2.html" class="text-white hover:text-gray-300">weather2</a></li>
+            <li><a href="#" class="text-white hover:text-gray-300">Contact</a></li>
+          </ul>
+        </div>
+    </nav>
     <mian class="app">
         <section class="greeting">
             <h2 class="title">
@@ -24,7 +38,10 @@
                     type="text"
                     name="content"
                     id="content"
-                    placeholder="e.g. make a video"/>
+                    class="input-box"
+                    placeholder="e.g. make a video"
+                    style="background-color:white;"
+                    />
                 <h4>Pick a category</h4>
                 <div class="options">
                     <label>

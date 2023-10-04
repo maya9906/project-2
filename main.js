@@ -1,3 +1,5 @@
+// ローカルストレージ
+
 window.addEventListener('load', () => {
     let todos = JSON.parse(localStorage.getItem('todos')) || [];
     const nameInput = document.querySelector('#name');
