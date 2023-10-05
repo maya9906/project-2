@@ -73,6 +73,19 @@ h4{
     font-weight: 700;
 }
 
+.save-btn{
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: var(--personal-glow);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
 .input-box{
     display: block;
     width: 100%;
@@ -245,3 +258,51 @@ flex: 1 1 0%;
     
 }
 
+/* .weather-data{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+} */
+
+.cityName{
+    color: var(--dark);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.details {
+    /* background-color: white; */
+    display: inline-block;
+    padding: 1em;
+}
+
+.weather-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+    padding: 1em;
+}
+
+.temp {
+    color: var(--gray);
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+@media (max-width:450px){
+    .cityName{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .icon{
+        display: inline;
+        margin: 0 auto;
+    }
+
+    .temp{
+        display: inline;
+        margin: 0 auto;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+}

@@ -9,14 +9,15 @@ const API_KEY = "7a73f546e23472cce6023cba32b7b261"; // API key for OpenWeatherMa
 const createWeatherCard = (cityName, weatherItem, index) => {
     if(index === 0) { // HTML for the main weather card
         return `<div class="details">
-                    <h2>${cityName} (${weatherItem.dt_txt.split(" ")[0]})</h2>
-                    <h6>Temperature: ${(weatherItem.main.temp - 273.15).toFixed(2)}°C</h6>
+                    <h4 class="cityName">${cityName} (${weatherItem.dt_txt.split(" ")[0]})</h4>
+                    <div>
+                    <h5 class="temp">${(weatherItem.main.temp - 273.15).toFixed(2)}°C</h5>
+                    <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" class="icon" alt="weather-icon">
+                    
                     <h6>Wind: ${weatherItem.wind.speed} M/S</h6>
                     <h6>Humidity: ${weatherItem.main.humidity}%</h6>
-                </div>
-                <div class="icon">
-                    <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather-icon">
                     <h6>${weatherItem.weather[0].description}</h6>
+                    </div>
                 </div>`;
     } else { // HTML for the other five day forecast card
         return `<li class="card">
