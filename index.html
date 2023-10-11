@@ -6,30 +6,30 @@
     <title>TO DO LIST</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <nav class="bg-pink-500 p-4">
+        <!-- styling for navbar with tailwind -->
         <div class="container mx-auto flex justify-between items-center">
-          <!-- ロゴ -->
-          <a href="#" class="text-white font-semibold text-xl">TASK GO</a>
-          <!-- メニュー項目 -->
-          <ul class="flex space-x-4">
-            <li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
-            <li><a href="pages/weather.html" class="text-white hover:text-gray-300">Weather</a></li>
-            <li><a href="pages/weather2.html" class="text-white hover:text-gray-300">weather2</a></li>
-            <li><a href="#" class="text-white hover:text-gray-300">Contact</a></li>
-          </ul>
+            <a href="#" class="text-white font-semibold text-xl">TASK GO</a>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="text-white hover:text-gray-300">Todo List</a></li>
+                <li><a href="pages/weather.html" class="text-white hover:text-gray-300">Weather</a></li>
+            </ul>
         </div>
     </nav>
-    <mian class="app">
+
+    <main class="app">
         <section class="greeting">
             <h2 class="title">
                 What's up, <input type="text" id="name" placeholder="Name here">
             </h2>
         </section>
+
         <section class="create-todo">
             <h3>CREATE A TODO</h3>
             <form id="new-todo-form">
@@ -41,45 +41,34 @@
                     class="input-box"
                     placeholder="e.g. make a video"
                     style="background-color:white;"
-                    />
+                />
                 <h4>Pick a category</h4>
                 <div class="options">
                     <label>
-                        <input type="radio" name="category" id="category" value="business"/>
+                        <input type="radio" name="category" value="business" class="category-radio">
                         <span class="bubble business"></span>
                         <div>Business</div>
                     </label>
                     <label>
-                        <input type="radio" name="category" id="category2" value="personal"/>
+                        <input type="radio" name="category" value="personal" class="category-radio">
                         <span class="bubble personal"></span>
                         <div>Personal</div>
                     </label>
                     <input type="submit" value="Add todo">
-                    <button class="save-btn">save</button>
                 </div>
             </form>
         </section>
 
         <section class="todo-list">
             <h3>TODO LIST</h3>
+            
             <div class="list" id="todo-list">
-                <div class="todo-item done">
-                    <label>
-                        <input type="checkbox" />
-                        <span class="buble business"></span>
-                    </label>
-                    <div class="todo-content">
-                        <input type="text" value="Make a video" readonly />
-                    </div>
-                    <div class="actions">
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
-                    </div>
-                </div>
 
             </div>
         </section>
-    </mian>
+        
+    </main>
     <script src="main.js"></script>
 </body>
 </html>
+

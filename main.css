@@ -243,6 +243,26 @@ flex: 1 1 0%;
     text-decoration: line-through;
     color: var(--gray);
 }
+.days-forecast{
+    border-radius: 0.5rem;
+    display: none;
+    background-color: #ea40a4;
+}
+.weather-cards h6,.weather-cards h3{
+    color: #eee;
+    display: block;
+    text-align: center;
+}
+.weather-cards h6{
+    font-size: 0.8em;
+}
+
+.weather-section h2 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
 
 @media (max-width:450px) {
     .todo-list .todo-item {
@@ -258,10 +278,7 @@ flex: 1 1 0%;
     
 }
 
-/* .weather-data{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-} */
+
 
 .cityName{
     color: var(--dark);
@@ -278,20 +295,45 @@ flex: 1 1 0%;
 .weather-cards {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 1em;
-    padding: 1em;
+    margin-bottom: 1em;
+    padding: 10px;
 }
 
+
 .temp {
-    color: var(--gray);
     font-size: 1.7rem;
     font-weight: 700;
 }
 
+.card {
+    background-color: #ea40a4;
+    /* border-radius: 20px; */
+}
+.card img {
+    margin: 0 auto;
+}
+
+.card h3, .card h6 {
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+}
+.card h6 {
+    margin-bottom: 0.5em;
+}
+.weather-cards {
+    gap: 0;
+    padding: 0.5em;
+    
+}
+
+
 @media (max-width:450px){
-    .cityName{
-        font-size: 1rem;
-        font-weight: 400;
+    .cityName {
+        font-size: 1.2em;
+        font-weight: 700;
+        text-align: center;
+        color: white;
     }
 
     .icon{
@@ -299,10 +341,87 @@ flex: 1 1 0%;
         margin: 0 auto;
     }
 
-    .temp{
-        display: inline;
+    .temp {
+        display: block;
         margin: 0 auto;
         font-size: 3rem;
         font-weight: 700;
+        text-align: center;
+        color: #eee;
     }
+    .weather-section{
+        margin: 0;
+        padding: 0;
+    }
+    
+
+    .details img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .weather-cards h6,.weather-cards h3{
+        font-size: 0.5em;
+    }
+
+    .greeting .title input {
+        font-size: 1.2rem;
+    }
+
+    .details {
+        background-color: #ea40a4;
+        display: block;
+        padding: 1em;
+        width: 80%;
+        margin: 1em auto;
+        border-radius: 5%;
+    }
+    .weather-section {
+       margin: 1em;
+    }
+    h6 {
+        color: white;
+    }
+
+    .input {
+        color: var(--dark);
+        font-size: 1.2rem;
+        
+    }
+    .greeting .title, .greeting .title input {
+        color: var(--dark);
+        font-size: 1.2rem;
+        
+    }
+
+    section {
+        margin: 1.5rem;
+        margin-bottom: 2rem;
+        margin-bottom: 2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .input-box {
+        display: block;
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 0.5rem 1.5rem;
+        color: var(--dark);
+        background-color: #fff;
+        border-radius: 0.5rem;
+        box-shadow: var(--shadow);
+        margin-bottom: 1.5rem;
+    }
+
+    .weather-section h2{
+        padding-left: 3em;
+    }
+
+    .details div h6 {
+        display: block;
+        text-align: center;
+    }
+
+
 }
