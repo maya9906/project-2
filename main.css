@@ -1,28 +1,25 @@
-
 :root {
-    --primary:#ea40a4 ;
-    --business:#3a82ee;
-    --personal:var(--primary);
-    --light:#eee;
-    --dark:#313154;
-    --danger:#ff5b57;
-
-    --gray:#5b5b5b;
-
-    --shadow:0 1px 3px rgba(0, 0, 0, 0.1);
-
-    --business-glow:0px 0px 4px rgba(58, 130, 238, 0.75);
-    --personal-glow:0px 0px 4px rgba(234, 64, 164, 0.75);
+    --primary: #ea40a4;
+    --business: #3a82ee;
+    --personal: var(--primary);
+    --light: #eee;
+    --dark: #313154;
+    --danger: #ff5b57;
+    --gray: #5b5b5b;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+    --personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-input:not([type="radio"]):not([type="checkbox"]), button {
+input:not([type="radio"]):not([type="checkbox"]),
+button {
     appearance: none;
     border: none;
     outline: none;
@@ -30,7 +27,7 @@ input:not([type="radio"]):not([type="checkbox"]), button {
     cursor: initial;
 }
 
-body{
+body {
     background: var(--light);
     color: var(--dark);
 }
@@ -49,7 +46,7 @@ h3 {
     margin-top: 0.5rem;
 }
 
-h4{
+h4 {
     color: var(--gray);
     font-size: 0.875rem;
     font-weight: 700;
@@ -73,7 +70,7 @@ h4{
     font-weight: 700;
 }
 
-.save-btn{
+.save-btn {
     display: block;
     width: 100%;
     font-size: 1.125rem;
@@ -86,7 +83,7 @@ h4{
     transition: 0.2s ease-in-out;
 }
 
-.input-box{
+.input-box {
     display: block;
     width: 100%;
     font-size: 1.125rem;
@@ -116,11 +113,11 @@ h4{
 }
 
 input[type="radio"],
-input[type="checkbox"]{
+input[type="checkbox"] {
     display: none;
 }
 
-.bubble{
+.bubble {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,12 +128,12 @@ input[type="checkbox"]{
     box-shadow: var(--business-glow);
 }
 
-.bubble-personal{
+.bubble-personal {
     border-color: var(--personal);
     box-shadow: var(--personal-glow);
 }
 
-.bubble::after{
+.bubble::after {
     content: "";
     display: block;
     opacity: 0;
@@ -204,7 +201,7 @@ input:checked ~ .bubble::after {
 }
 
 .todo-item .todo-content {
-flex: 1 1 0%;
+    flex: 1 1 0%;
 }
 
 .todo-item .todo-content input {
@@ -214,16 +211,16 @@ flex: 1 1 0%;
 
 .todo-item .actions {
     display: flex;
-    align-items:center;
+    align-items: center;
 }
 
-.todo-item .actions button{
+.todo-item .actions button {
     display: block;
     padding: 0.5rem;
     border-radius: 0.25rem;
     color: #fff;
     cursor: pointer;
-    transition: 0.2 ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 .todo-item .actions button:hover {
@@ -243,17 +240,21 @@ flex: 1 1 0%;
     text-decoration: line-through;
     color: var(--gray);
 }
-.days-forecast{
+
+.days-forecast {
     border-radius: 0.5rem;
     display: none;
     background-color: #ea40a4;
 }
-.weather-cards h6,.weather-cards h3{
+
+.weather-cards h6,
+.weather-cards h3 {
     color: #eee;
     display: block;
     text-align: center;
 }
-.weather-cards h6{
+
+.weather-cards h6 {
     font-size: 0.8em;
 }
 
@@ -263,11 +264,10 @@ flex: 1 1 0%;
     margin-bottom: 1em;
 }
 
-
 @media (max-width:450px) {
     .todo-list .todo-item {
         grid-template-columns: 30px 90%;
-        grid-row: 1fr 1fr;
+        grid-template-rows: 1fr 1fr; 
     }  
 
     .actions {

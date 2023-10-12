@@ -210,7 +210,7 @@ input:checked ~ .bubble::after {
     border-radius: 0.25rem;
     color: #fff;
     cursor: pointer;
-    transition: 0.2 ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 .todo-item .actions button:hover {
@@ -234,7 +234,7 @@ input:checked ~ .bubble::after {
 @media (max-width:450px) {
     .todo-list .todo-item {
         grid-template-columns: 30px 90%;
-        grid-row: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }  
 
     .actions {
