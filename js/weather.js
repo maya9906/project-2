@@ -13,14 +13,14 @@ const createWeatherCard = (cityName, weatherItem, index) => {
                     <h5 class="temp">${(weatherItem.main.temp - 273.15).toFixed(2)}°C</h5>
                     <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" class="icon" alt="weather-icon">
                     <div>
-                        <h6>${weatherItem.weather[0].descreiption}</h6>
+                        <h6>${weatherItem.weather[0].description}</h6>
                         <h6>Wind: ${weatherItem.wind.speed} M/S  Humidity: ${weatherItem.main.humidity}%</h6>
                     </div>
                 </div>`;
     } else { // HTML for the other five day forecast card
         return `<li class="card">
                     <h3>${weatherItem.dt_txt.split(" ")[0]}</h3>
-                    <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather-icon">
+                    <img src='https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png' alt="weather-icon">
                     <h6>${(weatherItem.main.temp - 273.15).toFixed(2)}°C</h6>
                     <h6>Wind: ${weatherItem.wind.speed} M/S</h6>
                     <h6>Humidity: ${weatherItem.main.humidity}%</h6>
@@ -60,22 +60,29 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
     });
 }
 
+
 const getCityCoordinates = () => {
     const cityName = cityInput.value.trim();
     if (cityName === "") return;
     const API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
     
-    // Get entered city coordinates (latitude, longitude, and name) from the API response
-    fetch(API_URL).then(response => response.json()).then(data => {
-    if (!data.length) return alert(`No coordinates found for ${cityName}`);
-    const { lat, lon, name } = data[0];
-    getWeatherDetails(name, lat, lon);
-    const fivedays = document.getElementById('fivedays-forecast');
-    fivedays.style.display = 'block'; // 要素を表示
-    
-}).catch(() => {
-    alert("An error occurred while fetching the coordinates!");
-});
+    $.ajax({
+        url: API_URL,
+        method: "GET",
+        dataType: "json",
+        success: function(data) {
+            if (!data.length) {
+                alert(`No coordinates found for ${cityName}`);
+            } else {
+                const { lat, lon, name } = data[0];
+                getWeatherDetails(name, lat, lon);
+                $("#fivedays-forecast").css("display", "block"); //Jquery, Ajax and DOM manipulation
+            }
+        },
+        error: function() {
+            alert("An error occurred while fetching the coordinates!");
+        }
+    });
 }
 
 
